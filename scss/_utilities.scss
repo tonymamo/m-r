@@ -1,0 +1,54 @@
+.float-left     { float: left; }
+.float-right    { float: right;}
+.clear-left     { clear: left; }
+.clear-right    { clear: right;}
+
+.align-left     { text-align: left; }
+.align-right    { text-align: right; }
+.align-center   { text-align: center; }
+
+.hide { display: none; }
+.show { display: block; }
+
+.list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+}
+
+
+
+
+
+//
+// record abstraction
+//
+.record {
+    margin: 0;
+    padding: 5px;
+}
+
+.record,
+.record__body {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
+}
+
+.record__img {
+    float: left;
+    margin-right: 10px;
+}
+
+.record__img img {
+    display: block;
+}

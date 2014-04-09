@@ -1,0 +1,110 @@
+// imports
+@import "mixins";
+@import "normalize";
+@import "reset";
+@import "icon-font";
+@import "grid";
+@import "utilities";
+
+// variables
+// $white: #ffffff;
+// $grey: #dddddd;
+// $black: #000000;
+// $green: #4d9631;
+
+// $text-color: $white;
+// $page-bg: $black;
+// $link-color: $green;
+// $heading-color: $link-color;
+
+$base-spacing: 1em;
+
+$font--serif: Georgia, serif;
+$font--sans-serif: sans-serif;
+
+
+$header-height: 44px;
+$heading-bg: lightcoral;
+$header-color: white;
+
+
+.header {
+    height: $header-height;
+    background: $heading-bg;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    z-index: 1000;
+}
+
+.header__title {
+    line-height: $header-height;
+    color: $header-color;
+    font-size: 18px;
+}
+
+.header__menu-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: $header-height;
+    width: $header-height;
+    color: $header-color;
+    display: block;
+    text-decoration: none;
+    font-size: $header-height;
+}
+
+.background {
+    position: fixed;
+    top: $header-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1;
+}
+
+.page {
+    position: absolute;
+    z-index: 2;
+    top: $header-height;
+    width: 100%;
+    min-height: 100%;
+}
+
+.next-show {
+    position: absolute;
+    bottom: 250px;
+    background-color: rgba(0,0,0, .5);
+    margin: $base-spacing 0;
+    width: 85%;
+    padding: $base-spacing;
+    @include border-radius(0 8px 8px 0)
+}
+
+.next-show small {
+    display: block;
+}
+
+.music-player {
+    background-color: rgba(0,0,0,.5);
+    height: 64px;
+    position: absolute;
+    width: 100%;
+    bottom: 150px;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 50px;
+    width: 100px;
+    background: grey;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 64px;
+    margin-left: -50px;
+    left: 50%;
+    @include border-radius(8px 8px 0 0);
+}
