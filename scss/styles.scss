@@ -1,3 +1,25 @@
+// variables
+$white: #ffffff;
+$grey:  #898989;
+$black: #000000;
+
+$text-color: #363636;
+$border-color: $grey;
+
+$brand-color: #c8114a;
+
+$base-font-size: 14px;
+$base-line-height: $base-font-size * 1.5;
+
+$base-spacing: 15px;
+$half-base-spacing: $base-spacing/2;
+
+$opacity-level: .85;
+
+$font--serif: Georgia, serif;
+$font--sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font--headings: "Century Gothic", CenturyGothic, Avenir, sans-serif;;
+
 // imports
 @import "mixins";
 @import "normalize";
@@ -5,106 +27,41 @@
 @import "icon-font";
 @import "grid";
 @import "utilities";
+@import "type";
 
-// variables
-// $white: #ffffff;
-// $grey: #dddddd;
-// $black: #000000;
-// $green: #4d9631;
+// page laout
+@import "header";
+@import "page";
 
-// $text-color: $white;
-// $page-bg: $black;
-// $link-color: $green;
-// $heading-color: $link-color;
-
-$base-spacing: 1em;
-
-$font--serif: Georgia, serif;
-$font--sans-serif: sans-serif;
-
-
-$header-height: 44px;
-$heading-bg: lightcoral;
-$header-color: white;
-
-
-.header {
-    height: $header-height;
-    background: $heading-bg;
-    width: 100%;
-    position: fixed;
-    text-align: center;
-    z-index: 1000;
-}
-
-.header__title {
-    line-height: $header-height;
-    color: $header-color;
-    font-size: 18px;
-}
-
-.header__menu-button {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: $header-height;
-    width: $header-height;
-    color: $header-color;
-    display: block;
+a {
     text-decoration: none;
-    font-size: $header-height;
+}
+
+a.active {
+    color: $brand-color;
 }
 
 .background {
-    position: fixed;
-    top: $header-height;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    z-index: 1;
-}
-
-.page {
     position: absolute;
-    z-index: 2;
-    top: $header-height;
+    border-top: $header-height solid $white;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
+    background-color: $white;
+    background-image: url('/img/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.next-show {
-    position: absolute;
-    bottom: 250px;
-    background-color: rgba(0,0,0, .5);
-    margin: $base-spacing 0;
-    width: 85%;
-    padding: $base-spacing;
-    @include border-radius(0 8px 8px 0)
+.background2 {
+    @extend .background;
+    background-image: none;
 }
 
-.next-show small {
-    display: block;
+.brand-color {
+    color: $brand-color;
 }
 
-.music-player {
-    background-color: rgba(0,0,0,.5);
-    height: 64px;
-    position: absolute;
-    width: 100%;
-    bottom: 150px;
-}
-
-.read-more {
-    position: absolute;
-    bottom: 50px;
-    width: 100px;
-    background: grey;
-    text-align: center;
-    text-decoration: none;
-    color: #FFF;
-    font-size: 64px;
-    margin-left: -50px;
-    left: 50%;
-    @include border-radius(8px 8px 0 0);
-}
+// views
+@import "bio";
+@import "news";
+@import "schedule";

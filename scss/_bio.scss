@@ -1,0 +1,71 @@
+.next-show {
+    position: absolute;
+    bottom: $base-spacing * 7;
+    height: $base-spacing * 5;
+    background-color: rgba($white, $opacity-level);
+    margin-bottom: $base-spacing;
+    width: 90%;
+    padding: $half-base-spacing;
+    @include border-radius(0 8px 8px 0)
+}
+
+.next-show__date {
+    width: $base-spacing * 4;
+    height: $base-spacing * 4;
+    color: $white;
+    background: $brand-color;
+    margin-bottom: 0;
+    line-height: .65;
+    @include border-radius(50%);
+}
+
+.next-show__date small {
+    font-size: $base-font-size;
+    display: block;
+    text-transform: uppercase;
+}
+
+.next-show__details {
+    line-height: 1.25;
+}
+
+.next-show__arrow {
+    font-size: $base-spacing * 3;
+    width: $base-spacing * 2;
+    margin-right: $half-base-spacing;
+    display: block;
+    line-height: $base-spacing * 4;
+}
+
+.music-player {
+    background-color: rgba($white, $opacity-level);
+    height: $base-spacing * 4 ;
+    position: absolute;
+    width: 100%;
+    bottom: $base-spacing * 2;
+    margin-bottom: $base-spacing;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 0;
+    width: $base-spacing * 4;
+    background-color: rgba($white, $opacity-level);
+    text-align: center;
+    text-decoration: none;
+    color: $black;
+    font-size: $base-spacing * 2;
+    margin-left: -$base-spacing * 2;
+    left: 50%;
+    @include border-radius(8px 8px 0 0);
+}
+
+.bio {
+    position: absolute;
+    top: 100%;
+    padding: $base-spacing;
+}
+
+.bio__header {
+    margin: $base-spacing 0;
+}

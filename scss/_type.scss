@@ -1,0 +1,70 @@
+h1,h2,h3,h4,h5,h6,
+ul,ol,dl,
+fieldset,
+table,
+pre,
+hr {
+    margin-bottom: 0;
+}
+
+p {
+    margin-bottom: $base-spacing;
+}
+
+body, div, pre, form, fieldset, p, blockquote, th, td {
+    font-size: $base-font-size;
+    font-family: $font--sans-serif;
+    color: $text-color;
+    line-height: $base-line-height;
+}
+
+h1,
+.alpha {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+h2,
+.beta {
+    font-size: $base-font-size * 1.5;
+    line-height: 1;
+}
+
+h3,
+.gamma {
+    font-size: $base-font-size * 1.25;
+    line-height: 1.2;
+}
+
+h4,
+.delta {
+    font-size: $base-font-size * 1.125;
+    line-height: 1.333;
+}
+
+h5,
+.epsilon {
+    font-size: $base-font-size;
+    line-height: 1.5;
+}
+
+h6,
+.zeta {
+    font-size: $base-font-size;
+    line-height: 1.5;
+}
+
+/* Smaller-than-body-copy sizes here. */
+small,
+.milli {
+    font-size: $base-font-size * .75;
+    line-height: 2;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
+}

@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 	<head>
+        <meta name="description" content="">
 		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-		<title></title>
+		<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, user-scalable=no"/>
+		<title ng-bind="title"></title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 
-	<body>
-        <header class="header">
-            <a href="" class="header__menu-button"><span class="icon-list2"></span></a>
-            <h1 class="header__title">Jennifer Westwood</h1>
+	<body ng-controller="AppCtrl">
+        <header class="header align-center">
+            <a href="" class="header__menu-button" ng-click="toggleHeaderMenu=!toggleHeaderMenu"><span class="icon-list2"></span></a>
+            <h1 class="header__title brand-color light" ng-bind="title"></h1>
         </header>
+        <nav class="header__menu" ng-hide="toggleHeaderMenu" ng-controller="navCtrl">
+            <ul class="main-nav unstyled">
+                <li class="main-nav__item">
+                    <a class="bold" ng-class="{ active: activePath=='/' }" href="#/">Bio</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="bold" ng-class="{ active: activePath=='/news' }" href="#/news">News</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="bold" ng-class="{ active: activePath=='/schedule' }" href="#/schedule">Schedule</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay" ng-hide="toggleHeaderMenu" ng-click="toggleHeaderMenu=!toggleHeaderMenu"></div>
 
-        <div class="background">
-        </div>
 
-        <div class="page">
 
-            <div class="next-show row">
-                <div class="span6">
-                    <h2><small>Next Show</small> 10/25</h2>
-                </div>
-                <div class="span6">
-                    <p>Green Dot Tavern</p>
-                    <p>Detroit, MI</p>
-                </div>
-            </div>
-
-            <div class="music-player">
-                .
-            </div>
-
-            <a href="" class="read-more"><span class="icon-arrow-down7"></span></a>
-        </div>
+        <div class="page view-animate" ng-view></div>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="js/app.js"></script>
 	</body>
 </html>

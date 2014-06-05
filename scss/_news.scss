@@ -1,0 +1,15 @@
+.news {
+}
+
+.news__item .record {
+    display: block;
+    border-bottom: 1px solid $border-color;
+}
+
+.news__headline {
+    width: 90%;
+}
+
+.news__time {
+    display: block;
+}
