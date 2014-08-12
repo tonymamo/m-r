@@ -9,7 +9,7 @@ $header-color: $brand-color;
     position: fixed;
     z-index: 1000;
     padding: $base-spacing;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border-color--header;
 }
 
 .header__title {
@@ -34,29 +34,24 @@ $header-color: $brand-color;
 
 .header__menu {
     position: fixed;
-    top: $header-height - ($base-spacing * 2);
-    background: $white;
-    width: 50%;
-    z-index: 2000;
-    margin: $base-spacing;
-    @include border-radius(8px);
-}
-
-.main-nav {
-    border: 1px solid $border-color;
-
-}
-
-.main-nav__item {
+    padding-top: $header-height;
+    background: rgba($white, .95);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    margin: 0;
+    top: -100%;
     border-bottom: 1px solid $border-color;
-    & a {
+    @include transition(all, .2s);
+}
+
+.header__menu--open {
+    top: 0;
+}
+
+.main-nav__item a {
         color: $text-color;
-        padding: $base-spacing;
         display: block;
-    }
-    &:last-child {
-        border: none;
-    }
 }
 
 .overlay {
@@ -66,5 +61,5 @@ $header-color: $brand-color;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1999;
+    z-index: 998;
 }

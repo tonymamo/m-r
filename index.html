@@ -6,27 +6,31 @@
 		<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, user-scalable=no"/>
 		<title ng-bind="title"></title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="phonegap.js"></script>
 	</head>
 
 	<body ng-controller="AppCtrl">
         <header class="header align-center">
-            <a href="" class="header__menu-button" ng-click="toggleHeaderMenu=!toggleHeaderMenu"><span class="icon-list2"></span></a>
+            <a href="" class="header__menu-button" ng-click="toggleHeaderMenu=!toggleHeaderMenu">
+                <span class="icon-list2"></span>
+            </a>
             <h1 class="header__title brand-color light" ng-bind="title"></h1>
         </header>
-        <nav class="header__menu" ng-hide="toggleHeaderMenu" ng-controller="navCtrl">
-            <ul class="main-nav unstyled">
+
+        <nav class="header__menu" ng-class="{'header__menu--open': toggleHeaderMenu==false }" ng-controller="navCtrl">
+            <ul class="main-nav unstyled list-display">
                 <li class="main-nav__item">
-                    <a class="bold" ng-class="{ active: activePath=='/' }" href="#/">Bio</a>
+                    <a class="list-display__item gamma" ng-class="{ active: activePath=='/' }" href="#/">Bio</a>
                 </li>
                 <li class="main-nav__item">
-                    <a class="bold" ng-class="{ active: activePath=='/news' }" href="#/news">News</a>
+                    <a class="list-display__item gamma" ng-class="{ active: activePath=='/news' }" href="#/news">News</a>
                 </li>
                 <li class="main-nav__item">
-                    <a class="bold" ng-class="{ active: activePath=='/schedule' }" href="#/schedule">Schedule</a>
+                    <a class="list-display__item gamma" ng-class="{ active: activePath=='/schedule' }" href="#/schedule">Schedule</a>
                 </li>
             </ul>
         </nav>
-        <div class="overlay" ng-hide="toggleHeaderMenu" ng-click="toggleHeaderMenu=!toggleHeaderMenu"></div>
+
 
 
 

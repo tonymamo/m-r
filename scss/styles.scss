@@ -1,29 +1,43 @@
 // variables
-$white: #ffffff;
-$grey:  #898989;
-$black: #000000;
+$white:         #ffffff;
+$grey--light:   #b5b5b5;    // list item border bottom
+$grey--regular: #a1a1a1;    // lighter text
+$grey--mid:     #898989;    // header border bottom
+$grey--dark:    #363636;    // text and image border
+$black:         #000000;
 
-$text-color: #363636;
-$border-color: $grey;
+// text
+$text-color:            $grey--dark;
+$text-color--light:     $grey--regular;
 
+// borders
+$border-color:          $grey--light;
+$border-color--header:  $grey--mid;
+$border-color--img:     $grey--dark;
+
+//brand
 $brand-color: #c8114a;
 
+// base sizes
 $base-font-size: 14px;
 $base-line-height: $base-font-size * 1.5;
 
 $base-spacing: 15px;
 $half-base-spacing: $base-spacing/2;
 
+// utility
 $opacity-level: .85;
 
+// type
 $font--serif: Georgia, serif;
 $font--sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font--headings: "Century Gothic", CenturyGothic, Avenir, sans-serif;;
+$font--headings: "questrialregular", "Century Gothic", CenturyGothic, Avenir, sans-serif;;
 
 // imports
 @import "mixins";
 @import "normalize";
 @import "reset";
+@import "font";
 @import "icon-font";
 @import "grid";
 @import "utilities";
@@ -47,9 +61,10 @@ a.active {
     width: 100%;
     height: 100%;
     background-color: $white;
-    background-image: url('/img/home.jpg');
+    background-image: url('../img/home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 .background2 {
