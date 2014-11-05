@@ -1,15 +1,7 @@
-.news {
-}
-
-.news__item .record {
-    display: block;
-    //border-bottom: 1px solid $border-color;
-}
-
 .news__headline {
-    width: 90%;
+    width: 80%;
 }
 
 .news__time {
-    display: block;
+    color: $text-color--light;
 }

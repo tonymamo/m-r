@@ -16,6 +16,10 @@
     list-style: none;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .ellipsis {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -23,6 +27,13 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     white-space: nowrap;
+}
+
+.button {
+    color: $white;
+    background-color: $brand-color;
+    border-bottom: 2px solid darken($brand-color, 15%);
+    @include border-radius($half-base-spacing);
 }
 
 
@@ -64,8 +75,24 @@
 
 }
 
+.list-display .record {
+    display: block;
+}
+
 .list-display__item {
     border-bottom: 1px solid $border-color;
     padding: $base-spacing;
     margin: 0;
+}
+
+
+
+
+
+// Big arrows
+.big-arrow {
+    font-size: $base-spacing * 3;
+    width: $base-spacing * 2;
+    display: block;
+    line-height: $base-spacing * 4;
 }

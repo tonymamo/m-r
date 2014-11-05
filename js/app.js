@@ -10,6 +10,18 @@ config(function ($routeProvider) {
         title: 'news',
         templateUrl: 'views/news.html'
     }).
+    when('/music', {
+        title: 'music',
+        templateUrl: 'views/music.html'
+    }).
+    when('/photos', {
+        title: 'photos',
+        templateUrl: 'views/photos.html'
+    }).
+    when('/videos', {
+        title: 'videos',
+        templateUrl: 'views/videos.html'
+    }).
     when('/schedule', {
         title: 'schedule',
         templateUrl: 'views/schedule.html'
@@ -50,5 +62,3 @@ function navCtrl($scope, $location, $route) {
     $scope.activePath = $location.path();
   });
 }
-
-StatusBar.hide();

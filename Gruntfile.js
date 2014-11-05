@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         files: ['index.html', 'views/*.html']
       },
       js: {
-        files: ['js/app.js']
+        files: ['js/app.js', 'js/jquery.swipebox.js']
       }
     },
 

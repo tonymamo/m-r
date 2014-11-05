@@ -1,3 +1,10 @@
+.background--bio {
+    background-image: url('../img/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 .next-show {
     position: absolute;
     bottom: $base-spacing * 7;
@@ -5,7 +12,7 @@
     background-color: rgba($white, $opacity-level);
     margin-bottom: $base-spacing;
     width: 90%;
-    padding: $half-base-spacing;
+    padding: $half-base-spacing $base-spacing;
     @include border-radius(0 8px 8px 0)
 }
 
@@ -27,14 +34,6 @@
 
 .next-show__details {
     line-height: 1.25;
-}
-
-.next-show__arrow {
-    font-size: $base-spacing * 3;
-    width: $base-spacing * 2;
-    margin-right: $half-base-spacing;
-    display: block;
-    line-height: $base-spacing * 4;
 }
 
 .music-player {

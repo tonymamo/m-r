@@ -9,6 +9,14 @@
     width: 100%;
 }
 
+.background {
+    position: absolute;
+    border-top: $header-height solid $white;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+}
+
 //http://dfsq.github.io/ngView-animation-effects/app/#/code
 .fade {
     opacity: 1;

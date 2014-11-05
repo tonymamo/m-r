@@ -1,0 +1,13 @@
+.music__track {
+    width: 75%;
+}
+
+.music__track-info {
+    color: $text-color--light;
+}
+
+.music__button {
+    padding: $half-base-spacing $base-spacing;
+    display: block;
+    margin-top: 13px; // $base-spacing minus the border-bottom width
+}

@@ -1,0 +1,21 @@
+.video__item {
+    position: relative;
+}
+
+.video__details {
+    width: 100%;
+}
+
+.video__play-button {
+    position: absolute;
+    top: $base-spacing * 2;
+    left: 40px; // img width divided by 2
+    width: $base-spacing * 2;
+    span {
+        color: $white;
+    }
+}
+
+.video__length {
+    color: $text-color--light;
+}
